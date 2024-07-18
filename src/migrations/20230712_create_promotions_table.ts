@@ -8,6 +8,8 @@ const query = `
     name VARCHAR(255) NOT NULL,
     date DATE NOT NULL,
     sentGifts INT NOT NULL,
+    daysToTakeGift INT NOT NULL,
+    daysToReceiveGift INT NOT NULL,
     description TEXT,
     cardNumbers TEXT
   )

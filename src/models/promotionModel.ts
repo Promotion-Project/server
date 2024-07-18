@@ -1,15 +1,12 @@
-import mysql from 'mysql';
+import { RowDataPacket } from 'mysql2';
 
-const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'your_password',
-    database: 'gift_promotion_db'
-});
-
-connection.connect((err) => {
-    if (err) throw err;
-    console.log('Connected to the MySQL server.');
-});
-
-export default connection;
+export interface Promotion extends RowDataPacket {
+  id: number;
+  name: string;
+  date: string;
+  sentGifts: number;
+  daysToTakeGift: number;
+  daysToReceiveGift: number;
+  description?: string;
+  cardNumbers?: string;
+}

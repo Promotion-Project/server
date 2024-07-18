@@ -5,4 +5,4 @@ export interface Promotion {
     sentGifts: number;
     description?: string;
     cardNumbers?: string;
-}  
+}

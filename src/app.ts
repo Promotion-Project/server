@@ -5,6 +5,7 @@ import swaggerJsDoc from 'swagger-jsdoc';
 import swaggerUi from 'swagger-ui-express';
 import promotionRoutes from './routes/promotionRoutes';
 import swaggerOptions from './config/swaggerConfig';
+import giftRoutes from './routes/giftRoutes';
 
 const app = express();
 
@@ -19,6 +20,7 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use('/api/promotions', promotionRoutes);
+app.use('/api', promotionRoutes);
+app.use('/api', giftRoutes);
 
 export default app;
